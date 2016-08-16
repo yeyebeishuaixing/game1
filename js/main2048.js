@@ -166,11 +166,13 @@ $(document).keydown( function( event ){
 });
 
 document.addEventListener('touchstart',function(event){
+    event.preventDefault();
     startx = event.touches[0].pageX;
     starty = event.touches[0].pageY;
 });
 
 document.addEventListener('touchend',function(event){
+    event.preventDefault();
     endx = event.changedTouches[0].pageX;
     endy = event.changedTouches[0].pageY;
 
